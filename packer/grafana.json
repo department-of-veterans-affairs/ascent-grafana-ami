@@ -16,12 +16,12 @@
       "vpc_id": "{{user `vpc_id`}}",
       "subnet_id": "{{user `subnet_id`}}",
       "ssh_username": "ec2-user",
-      "ami_name": "ascent-kibana {{timestamp}}",
+      "ami_name": "ascent-grafana {{timestamp}}",
       "tags": {
-        "name": "ascent-kibana"
+        "name": "ascent-grafana"
       },
       "snapshot_tags": {
-        "name": "ascent-es-proxy"
+        "name": "ascent-grafana"
       }
     }
   ],
