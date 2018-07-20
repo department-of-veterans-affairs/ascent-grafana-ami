@@ -29,8 +29,8 @@
   "provisioners": [
     {
     "type": "file",
-    "source": "custom.ini",
-    "destination": "/tmp/custom.ini"
+    "source": "grafana.ini",
+    "destination": "/tmp/grafana.ini"
     },
     {
       "type": "file",
