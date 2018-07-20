@@ -10,3 +10,7 @@ output "private_ip" {
 output "http_port" {
   value = "${var.grafana_http_port}"
 }
+
+output "db_endpoint" {
+  value = "${module.grafana_db.endpoint}"
+}
