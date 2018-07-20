@@ -43,7 +43,7 @@ module "security_group_rules" {
   security_group_id = "${aws_security_group.grafana_security_group.id}"
   allowed_ssh_cidr_blocks = ["${var.allowed_ssh_cidr_blocks}"]
   allowed_http_cidr_blocks = ["${var.allowed_http_cidr_blocks}"]
-  http_port                = ["${var.grafana_http_port}"]
+  http_port                = "${var.grafana_http_port}"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
