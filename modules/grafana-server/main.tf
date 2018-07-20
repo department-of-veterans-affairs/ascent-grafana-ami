@@ -65,7 +65,7 @@ module "grafana_db" {
   grafana_db_username = "grafana"
   grafana_db_password = "grafana"
   grafana_db_identifier = "${var.instance_name}-db"
-  grafana_subnet_ids = ["${var.subnet_id}"]
+  grafana_subnet_ids = ["${var.db_subnet_ids}"]
   vpc_id               = "${var.vpc_id}"
   allowed_inbound_security_group_id = "${aws_security_group.grafana_security_group.id}"
 }

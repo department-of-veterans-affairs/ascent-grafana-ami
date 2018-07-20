@@ -26,6 +26,11 @@ variable "allowed_http_cidr_blocks" {
   type        = "list"
 }
 
+variable "db_subnet_ids" {
+  description = "A list of subnet IDs to launch the RDS instance into"
+  type        = "list"
+}
+
 
 
 ###############################################################################
