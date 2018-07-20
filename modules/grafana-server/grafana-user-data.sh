@@ -19,7 +19,7 @@ sudo sed -i 's/DATABASE_PASSWORD/${DATABASE_PASSWORD}/g' /tmp/grafana.ini
 
 echo "--- Moving the conf file where it belongs"
 sudo mv /tmp/grafana.ini /etc/grafana/grafana.ini
-
+sudo chown root:grafana /etc/grafana/grafana.ini 
 
 echo "--- Starting grafana service"
 sudo /bin/systemctl start grafana-server.service
