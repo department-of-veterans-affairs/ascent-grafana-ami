@@ -62,7 +62,7 @@ data "template_file" "grafana_user_data" {
 # ---------------------------------------------------------------------------------------------------------------------
 module "grafana_db" {
   source = "../grafana-database"
-  grafana_db_username = "grafana"
+  grafana_db_username = "grafana@1234"
   grafana_db_password = "grafana"
   grafana_db_identifier = "${var.instance_name}-db"
   grafana_subnet_ids = ["${var.db_subnet_ids}"]
