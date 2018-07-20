@@ -53,7 +53,11 @@ data "template_file" "grafana_user_data" {
   template = "${file("${path.module}/grafana-user-data.sh")}"
 
   vars {
-    some_var       = "Hello"
+    DATABASE_TYPE  = "postgres"
+    DATABASE_ENDPOINT = "${module.grafana_db.endpoint}"
+    DATABASE_NAME     = "postgres"
+    DATABASE_USER     = "grafana"
+    DATABASE_PASSWORD = "grafana#123"
   }
 }
 
