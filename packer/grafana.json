@@ -33,6 +33,11 @@
     "destination": "/tmp/custom.ini"
     },
     {
+      "type": "file",
+      "source": "prometheus.yml",
+      "destination": "/tmp/prometheus.yml"
+    },
+    {
       "type": "shell",
       "scripts": [
         "install-grafana.sh"
