@@ -27,7 +27,7 @@ resource "aws_instance" "grafana_instance" {
   #    so we can dynamically load dashboards from source.
   provisioner "file" {
     source       = "dashboards"
-    destination  = "/tmp/dashboards"
+    destination  = "/tmp"
 
     connection {
       type   = "ssh"
