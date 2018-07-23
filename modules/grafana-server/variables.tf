@@ -47,9 +47,14 @@ variable "private_key_file_path" {
   description = "The path to the private key so you can upload the dashboards directory to the instance."
 }
 
+variable "dashboard_dir_name" {
+  description = "The name of the local dashboard directory to copy to the grafana instance"
+}
+
 ###############################################################################
 # DEFAULT VARIABLES
 ###############################################################################
+
 variable "database_name" {
   description = "The name of the database. Since the database module doesn't specify an actual database name, and it's using the postgres engine, then the default is postgres"
   default     = "postgres"

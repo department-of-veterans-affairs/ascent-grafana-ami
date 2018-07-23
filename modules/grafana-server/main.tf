@@ -26,7 +26,7 @@ resource "aws_instance" "grafana_instance" {
   # Copies all files under the dashboards dir to the instance's /usr/share/grafana/public/dashboards directory,
   #    so we can dynamically load dashboards from source.
   provisioner "file" {
-    source       = "dashboards"
+    source       = "${var.dashboard_dir_name}"
     destination  = "/tmp"
 
     connection {
