@@ -28,11 +28,11 @@ resource "aws_instance" "grafana_instance" {
   provisioner "file" {
     source       = "dashboards"
     destination  = "/tmp/dashboards"
-    user         = "ec2-user"
 
     connection {
       type   = "ssh"
       private_key = "${file("${var.private_key_file_path}")}"
+      user         = "ec2-user"
     }
   }
 }
