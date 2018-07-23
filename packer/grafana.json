@@ -34,8 +34,8 @@
     },
     {
       "type": "file",
-      "source": "prometheus.yml",
-      "destination": "/tmp/prometheus.yml"
+      "source": "prometheus.yaml",
+      "destination": "/tmp/prometheus.yaml"
     },
     {
       "type": "shell",
