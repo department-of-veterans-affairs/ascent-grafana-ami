@@ -39,6 +39,9 @@ variable "grafana_db_password" {
   description = "The password with which to authenticate to the grafana database."
 }
 
+variable "prometheus_url" {
+  description = "The URL of the prometheus instance (e.g http://localhost:9090)"
+}
 
 ###############################################################################
 # DEFAULT VARIABLES
