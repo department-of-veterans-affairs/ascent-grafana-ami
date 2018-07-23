@@ -22,6 +22,13 @@ resource "aws_instance" "grafana_instance" {
   vpc_security_group_ids = ["${aws_security_group.grafana_security_group.id}", "${var.aws_security_group_ids}"]
   user_data              = "${var.user_data == "" ? data.template_file.grafana_user_data.rendered : var.user_data}"
   tags = "${merge(var.tags, map("Name", "${var.instance_name}"))}"
+
+  # Copies all files under the dashboards dir to the instance's /usr/share/grafana/public/dashboards directory,
+  #    so we can dynamically load dashboards from source.
+  provisioner "file" {
+    source       = "dashboards"
+    destination  = "/usr/share/grafana/public/dashboards/"
+  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
