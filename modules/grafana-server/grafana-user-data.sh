@@ -29,6 +29,8 @@ sudo mv /tmp/prometheus.yaml /etc/grafana/provisioning/datasources/prometheus.ya
 sudo chown root:grafana /etc/grafana/provisioning/datasources/prometheus.yaml
 
 echo "--- Moving the dashboard files where they belong..."
+# TODO: find a way to add a prefix to the dashboard file names once we actually
+#       Have dashboards so we don't conflict with the home dashboard file name
 sudo mv /tmp/dashboards/* /usr/share/grafana/public/dashboards/
 sudo chown root:grafana /usr/share/grafana/public/dashboards/*
 
