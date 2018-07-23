@@ -72,6 +72,7 @@ data "template_file" "grafana_user_data" {
     DATABASE_USER     = "${var.grafana_db_username}"
     DATABASE_PASSWORD = "${var.grafana_db_password}"
     PROMETHEUS_URL    = "${var.prometheus_url}"
+    DASHBOARD_DIR_NAME = "${var.dashboard_dir_name}"
   }
 }
 
