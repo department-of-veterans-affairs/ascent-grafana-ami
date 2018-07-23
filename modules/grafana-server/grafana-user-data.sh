@@ -28,6 +28,10 @@ echo "--- Moving the datasource yaml file where it belongs"
 sudo mv /tmp/prometheus.yaml /etc/grafana/provisioning/datasources/prometheus.yaml
 sudo chown root:grafana /etc/grafana/provisioning/datasources/prometheus.yaml
 
+echo "--- Moving the dashboard files where they belong..."
+sudo mv /tmp/dashboards/* /usr/share/grafana/public/dashboards/
+sudo chown root:grafana /usr/share/grafana/public/dashboards/*
+
 echo "--- Starting grafana service"
 sudo /bin/systemctl start grafana-server.service
 

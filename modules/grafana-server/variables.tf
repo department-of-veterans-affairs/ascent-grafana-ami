@@ -43,6 +43,10 @@ variable "prometheus_url" {
   description = "The URL of the prometheus instance (e.g http://localhost:9090)"
 }
 
+variable "private_key_file_path" {
+  description = "The path to the private key so you can upload the dashboards directory to the instance."
+}
+
 ###############################################################################
 # DEFAULT VARIABLES
 ###############################################################################
