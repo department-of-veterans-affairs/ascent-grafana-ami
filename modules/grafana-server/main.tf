@@ -57,7 +57,7 @@ data "template_file" "grafana_user_data" {
     DATABASE_ENDPOINT = "${module.grafana_db.endpoint}"
     DATABASE_NAME     = "postgres"
     DATABASE_USER     = "grafana"
-    DATABASE_PASSWORD = "grafana#123"
+    DATABASE_PASSWORD = "grafana#1234"
   }
 }
 
