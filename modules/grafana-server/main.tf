@@ -55,9 +55,9 @@ data "template_file" "grafana_user_data" {
   vars {
     DATABASE_TYPE  = "postgres"
     DATABASE_ENDPOINT = "${module.grafana_db.endpoint}"
-    DATABASE_NAME     = "postgres"
-    DATABASE_USER     = "grafana"
-    DATABASE_PASSWORD = "grafana#1234"
+    DATABASE_NAME     = "${var.database_name}"
+    DATABASE_USER     = "${var.grafana_db_username}"
+    DATABASE_PASSWORD = "${var.grafana_db_password}"
   }
 }
 
@@ -66,8 +66,8 @@ data "template_file" "grafana_user_data" {
 # ---------------------------------------------------------------------------------------------------------------------
 module "grafana_db" {
   source = "../grafana-database"
-  grafana_db_username = "grafana"
-  grafana_db_password = "grafana#1234"
+  grafana_db_username = "${var.grafana_db_username}"
+  grafana_db_password = "${var.grafana_db_password}"
   grafana_db_identifier = "${var.instance_name}-db"
   grafana_subnet_ids = ["${var.db_subnet_ids}"]
   vpc_id               = "${var.vpc_id}"

@@ -31,11 +31,23 @@ variable "db_subnet_ids" {
   type        = "list"
 }
 
+variable "grafana_db_username" {
+  description = "The username with which to authenticate to the grafana database."
+}
+
+variable "grafana_db_password" {
+  description = "The password with which to authenticate to the grafana database."
+}
 
 
 ###############################################################################
 # DEFAULT VARIABLES
 ###############################################################################
+variable "database_name" {
+  description = "The name of the database. Since the database module doesn't specify an actual database name, and it's using the postgres engine, then the default is postgres"
+  default     = "postgres"
+}
+
 variable "tags" {
   description = "Tags to apply to the EC2 instance. Name will be applied by default."
   type        = "map"
