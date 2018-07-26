@@ -1,0 +1,13 @@
+# # config file version
+apiVersion: 1
+
+ # list of datasources to insert/update depending
+ # on what's available in the datbase
+datasources:
+ - name: Prometheus
+   type: prometheus
+   access: direct
+   orgId: 1
+   url: PROMETHEUS_URL
+   version: 1
+   editable: false
