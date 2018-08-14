@@ -34,6 +34,9 @@ echo "--- Moving the dashboard files where they belong..."
 sudo mv /tmp/${DASHBOARD_DIR_NAME}/* /usr/share/grafana/public/dashboards/
 sudo chown root:grafana /usr/share/grafana/public/dashboards/*
 
+echo "--- Installing the status panel plugin"
+sudo grafana-cli plugins install vonage-status-panel
+
 echo "--- Starting grafana service"
 sudo /bin/systemctl start grafana-server.service
 
