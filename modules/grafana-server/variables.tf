@@ -51,6 +51,10 @@ variable "dashboard_dir_name" {
   description = "The name of the local dashboard directory to copy to the grafana instance"
 }
 
+variable "grafana_url_name" {
+  description = "The URL of the grafana instance to which you want your clients to connect."
+}
+
 ###############################################################################
 # DEFAULT VARIABLES
 ###############################################################################
