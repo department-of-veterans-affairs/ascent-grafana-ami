@@ -13,6 +13,7 @@
       "region": "{{user `aws_region`}}",
       "source_ami_filter": {"filters": {"name": "ascent-base-*"}, "most_recent": true},
       "instance_type": "t2.micro",
+      "associate_public_ip_address": true,
       "vpc_id": "{{user `vpc_id`}}",
       "subnet_id": "{{user `subnet_id`}}",
       "ssh_username": "ec2-user",
