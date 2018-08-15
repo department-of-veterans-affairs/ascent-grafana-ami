@@ -16,7 +16,6 @@ sudo sed -i 's/DATABASE_ENDPOINT/${DATABASE_ENDPOINT}/g' /tmp/grafana.ini
 sudo sed -i 's/DATABASE_NAME/${DATABASE_NAME}/g' /tmp/grafana.ini
 sudo sed -i 's/DATABASE_USER/${DATABASE_USER}/g' /tmp/grafana.ini
 sudo sed -i 's/DATABASE_PASSWORD/${DATABASE_PASSWORD}/g' /tmp/grafana.ini
-sudo sed -i 's/GRAFANA_URL_NAME/${GRAFANA_URL_NAME}/g' /tmp/grafana.ini
 
 echo "--- Replacing values in temp grafana datasource yaml file"
 sudo sed -i 's|PROMETHEUS_URL|${PROMETHEUS_URL}|g' /tmp/prometheus.yaml
